@@ -1,0 +1,78 @@
+
+.modalForm {
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 2px;
+  box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background: #201c2980;
+  color: rgba(0, 0, 0, 0.8);
+  font-family: 'Quicksand', Helvetica, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.card {
+  border: none !important;
+  width: 80%;
+  box-shadow: .5rem .5rem 1rem fade-out(black, .6);
+  justify-content: flex-start;
+  align-items: center;
+  animation: show .5s ease-in-out;
+  //.card-header {
+  //  color: red;
+  //  font-size: 4rem;
+  //  margin: 0;
+  //  border: none;
+  //  padding: 1rem 0 0;
+  //}
+  //.card-body {
+  //  font-size: 1.2rem;
+  //  text-align: center;
+  //  padding: 0;
+  //  p:first-of-type {
+  //    font-size: 2rem;
+  //    margin: .5rem;
+  //  }
+  //}
+
+}
+/* Makes the modal appear with bouncing effect */
+@keyframes show {
+  0% {
+    transform: scale(0);
+  }
+  60% {
+    transform: scale(1.1);
+  }
+  80% {
+    transform: scale(.95);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+.away {
+  animation: away .5s ease-in-out;
+  transform: scale(0);
+}
+/* Makes the modal disappear after button is clicked, with slight growing effect before disappearing */
+@keyframes away {
+  0% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(0);
+  }
+}
